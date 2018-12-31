@@ -1,2 +1,2 @@
 # hddled-sf
-Science Program
+Science Fair
