@@ -2,14 +2,14 @@ from os import rename
 from time import sleep
 
 # Constants
-MSG_PATH = "hddledsfmsg.txt"
-FOLDER_A_PATH = "C:/Users/Ben Alford/Desktop/hddledsfa"
-FOLDER_B_PATH = "C:/Users/Ben Alford/Desktop/hddledsfb"
-MOVE_DATA_PATH = "hddledsfmvdat"
-BIT_SLEEP_TIME = 6 
-ONE_SLEEP_TIME = 2
-SECURITY_BIT_REPEATS = 3
-SECURITY_BIT_SLEEP_TIME = 4
+MSG_PATH = "Relative path to .txt file (from this program/) containing message to transmit"
+FOLDER_A_PATH = "Absolute path to folder A"
+FOLDER_B_PATH = "Absolute path to folder B"
+MOVE_DATA_PATH = "Relative path (from within folder A at FOLDER_A_PATH) to data to move"
+BIT_SLEEP_TIME = X
+ONE_SLEEP_TIME = X
+SECURITY_BIT_REPEATS = X
+SECURITY_BIT_SLEEP_TIME = X
 
 f = open(MSG_PATH,"r")
 msg = list(f.read())
@@ -24,7 +24,17 @@ def move(m2state):
     elif m2state == "b":
         rename(fbp,fap)
 
-print("Starting in 5 seconds...")
+print("Start camera in 5...")
+sleep(1.5)
+print("4")
+sleep(1.5)
+print("3")
+sleep(1.5)
+print("2")
+sleep(1.5)
+print("1")
+sleep(1.5)
+print("0 (Start Camera now!)\nStarting in 5 seconds...")
 sleep(5)
 try:
     for bit in msg:
